@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y vim
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=build /usr/local/app/dist/angular-bulletin-project/browser/* /usr/share/nginx/html/
+COPY --from=build /usr/local/app/dist/angular-bulletin-project/browser/ /usr/share/nginx/html/
 
 # Copy the custom Nginx configuration file
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
