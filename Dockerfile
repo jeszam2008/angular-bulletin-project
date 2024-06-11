@@ -40,5 +40,5 @@ COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN service nginx restart
 
-# Expose port 4200
-EXPOSE 4200
+# Expose port 80
+EXPOSE 80
